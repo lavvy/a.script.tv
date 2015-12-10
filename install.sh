@@ -1,14 +1,27 @@
 #!/bin/sh
 #
 # File: install.sh
-# Author: Scott Kidder
-# Purpose: This script will configure a newly-imaged Raspberry Pi running
-#   Raspbian Wheezy 2014-09-09 with the dependencies and HSMM-Pi components.
-#
-if [ "$(id -u)" = "0" ]
-then echo "Please do not run as root, HTTP interface will not work"
-exit
-fi
-PROJECT_HOME=${HOME}/workspace 
-cd ${HOME}
-# 
+# Author: pip lavvy
+# Purpose: This script will configure a a. Script. Tv
+
+
+#replace skin
+
+sudo rm /usr/share/kodi/addons/skin.osmc
+
+sudo cp assets/addons /usr/share/kodi
+
+
+
+#replace splash pics
+
+sudo rm /usr/splash.png
+
+sudo cp assets/addons/splash.png /usr/splash.png
+
+
+sudo rm /usr/splash_sad.png
+
+sudo cp assets/addons/splash_sad.png /usr/splash_sad.png
+
+
