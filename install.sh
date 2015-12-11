@@ -7,7 +7,13 @@
 
 #replace skin
 
-sudo rm /usr/share/kodi/addons/skin.osmc
+#sudo rm /usr/share/kodi/addons/skin.osmc
+
+if [[ -d /usr/share/kodi/addons/skin.osmc.lock ]]; then
+    echo "Removing Lock"
+    rm -rf /usr/share/kodi/addons/skin.osmc.lock
+fi
+
 
 sudo cp assets/addons /usr/share/kodi
 
