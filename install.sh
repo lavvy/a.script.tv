@@ -10,21 +10,6 @@
 
 
 
-
-
-#replace skin
-
-
-
-#sudo chmod 777 /usr/share/kodi/addons
-
-if [ -d /usr/share/kodi/addons/skin.osmc.lock ]; then
-    echo "Removing Lock"
-    rm -rf /usr/share/kodi/addons/skin.osmc.lock
-fi
-
-#sudo rm -r /usr/share/kodi/addons/skin.osmc
-
 if [ -f /usr/splash_sad.png ]; then
     echo "Removing file"
     rm -rf /usr/splash_sad.png
@@ -42,9 +27,10 @@ fi
 
 
 
+sudo cp assets/files/settings.xml /usr/share/kodi/system/settings/settings.xml
 
-sudo cp assets/addons/splash.png /usr/splash.png
+sudo cp assets/files/splash.png /usr/splash.png
 
-sudo cp assets/addons/splash_sad.png /usr/splash_sad.png
+sudo cp assets/files/splash_sad.png /usr/splash_sad.png
 
-sudo cp -a assets/addons /usr/share/kodi/addons
+sudo cp -a assets/addons /usr/share/kodi
